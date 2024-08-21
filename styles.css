@@ -63,9 +63,11 @@ main {
 }
 
 section {
+    display: flex;
+    align-items: center;
     background-color: transparent;
     padding: 20px;
-    border: none;
+    border: 1px solid white;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -74,6 +76,7 @@ section {
     font-family: Arial;
     font-size: 1.2rem;
     text-decoration: none;
+    width: 275px;
 }
 
 section a {
@@ -83,19 +86,23 @@ section a {
 }
 
 section h1 {
-    margin-top: 0;
+    margin-top: 0 auto;
     font-size: 2rem;
     color: white;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
+
+
 
 .img_logo,
 .img_logo_am,
-.img_logo_yt,
 .img_logo_ig,
+.img_logo_yt,
 .img_logo_tt {
-    width: 50px; /* Tamaño base de los íconos */
+    width: 50px; 
     height: 50px;
     background-size: contain;
     background-position: center;
@@ -114,8 +121,6 @@ section h1 {
 
 .img_logo_yt {
     background-image: url('yt_logo.png');
-    width: 100px; /* Tamaño específico para YouTube */
-    height: 100px;
 }
 
 .img_logo_ig {
@@ -140,11 +145,12 @@ footer {
     width: 100%;
     bottom: 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-size: .4rem;
 }
 
 footer p {
     margin: 0;
-    font-size: 1rem;
+    font-size: .75rem;
 }
 
 @media (max-width: 768px) {
@@ -200,10 +206,9 @@ footer p {
     }
 
     footer p {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 }
-
 
 /*                                         
                                                  

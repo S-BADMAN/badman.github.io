@@ -6,14 +6,17 @@ body {
     padding: 0;
     background-color: black;
     color: #333;
-    height: auto;
-    background-attachment: fixed;
-    height: 100vh;
+    background-image: url('BADMAN.jpg'); /* Imagen de fondo aplicada al body */
+    background-size: 75%; /* La imagen cubrirá toda la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: repeat; /* No repetir la imagen de fondo */
+    background-attachment: fixed; /* Imagen de fondo fija al hacer scroll */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
 }
 
 header {
     background-color: pink;
-    color:black;
+    color: black;
     padding: 1rem 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -31,7 +34,7 @@ nav ul {
     margin: 1rem 0 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
 }
 
 nav ul li {
@@ -52,134 +55,96 @@ nav ul li a:hover {
 
 main {
     color: white;
-    background-image: url('BADMAN.jpg');
-    background-size: 75%;
-    background-position: center;
-    background-image: auto;
-    height: 70%;
-    width: auto ;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    background-repeat: repeat;
-    background-attachment: fixed;
 }
 
 section {
-    background-color: transparent; 
-    padding: 20px; 
-    border: none; 
+    background-color: transparent;
+    padding: 20px;
+    border: none;
     border-radius: 10px;
-    cursor: pointer; 
-    transition: background-color 0.3s; 
-    max-width: 600px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 600px;
     color: white;
-    font-family: Arial ;
+    font-family: Arial;
     font-size: 1.2rem;
     text-decoration: none;
-    
 }
 
-section a{
-    color: white; 
+section a {
+    color: white;
     text-decoration: none;
     font-family: 'Courier';
 }
 
-section h2 {
+section h1 {
     margin-top: 0;
     font-size: 2rem;
-    color: white; 
-    font-family: 'Courier';
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.img_logo,
+.img_logo_am,
+.img_logo_yt,
+.img_logo_ig,
+.img_logo_tt {
+    width: 50px; /* Tamaño base de los íconos */
+    height: 50px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .img_logo {
-    width: 50px; 
-    height: 50px; 
-    background-image: url('spotify-logo.png'); 
-    background-size: contain; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    display: inline-block; 
-    margin-right: 10px; 
-    vertical-align: middle; 
-    color: white;
+    background-image: url('spotify-logo.png');
 }
 
 .img_logo_am {
-    width: 50px; 
-    height: 50px; 
-    background-image: url('Apple_Music.png'); 
-    background-size: contain; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    display: inline-block; 
-    margin-right: 15px; 
-    vertical-align: middle; 
+    background-image: url('Apple_Music.png');
 }
 
 .img_logo_yt {
-    width: 100px; 
-    height: 100px; 
-    background-image: url('yt_logo.png'); 
-    background-size: contain; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    display: inline-block; 
-    margin-right: 0px; 
-    vertical-align: middle; 
+    background-image: url('yt_logo.png');
+    width: 100px; /* Tamaño específico para YouTube */
+    height: 100px;
 }
 
 .img_logo_ig {
-    width: 50px; 
-    height: 50px; 
-    background-image: url('img_logo_ig.png'); 
-    background-size: contain; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    display: inline-block; 
-    margin-right: 10px; 
-    vertical-align: middle; 
+    background-image: url('img_logo_ig.png');
 }
+
 .img_logo_tt {
-    width: 50px; 
-    height: 50px; 
-    background-image: url('img_logo_tt.png'); 
-    background-size: contain; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    display: inline-block; 
-    margin-right: 10px; 
-    vertical-align: middle; 
+    background-image: url('img_logo_tt.png');
 }
-header h1 {
-    margin: 0;
-    font-size: 4rem;
-    display: inline-block; 
-}
-
-header h1 span {
-    margin-left: 10px;
-}
-
 
 section:hover {
-    background-color:pink;
+    background-color: pink;
     transform: scale(1.1);
 }
 
-section h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    color: white;
+footer {
+    background-color: pink;
+    color: black;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    color: white;
+footer p {
+    margin: 0;
+    font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -206,7 +171,6 @@ section h2 {
     }
 }
 
-/* Estilos para pantallas pequeñas (smartphones) */
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.5rem;
@@ -241,24 +205,6 @@ section h2 {
 }
 
 
-footer {
-    background-color: pink;
-    color: black;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-
-
 /*                                         
                                                  
                              #                 
@@ -269,10 +215,11 @@ footer p {
           #########     ###########     #########
          ###########   #############   ###########
         ###########################################
-       ####    #     #   ###  ###  #     #  ### ####
+       ####   ##     #   ###  ###  #     #  ### ####
        #### ## # ### # ## ## # # # # ### # # ## ####
-       #### ## #     # ## ## ## ## #     # ## # ####
-        ###    # ### #   ### ##### # ### # ###  ###
+       #### # ##     # ## ## ## ## #     # #  # ####
+       #### ## # ### # ## ## ## ## # ### # ## # ####
+        ###   ## ### #   ### ##### # ### # ###  ###
          #########################################
           #######################################
            #####################################

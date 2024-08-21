@@ -1,13 +1,14 @@
 /* BAD MAN CODE*/
 
-
-
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: black;
     color: #333;
+    height: auto;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 header {
@@ -30,6 +31,7 @@ nav ul {
     margin: 1rem 0 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -53,25 +55,29 @@ main {
     background-image: url('BADMAN.jpg');
     background-size: 75%;
     background-position: center;
-    height: 100vh;
-    width: auto;
+    background-image: auto;
+    height: 70%;
+    width: auto ;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
+    padding: 2rem;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 section {
     background-color: transparent; 
-    padding: 70px; 
+    padding: 20px; 
     border: none; 
     border-radius: 10px;
     cursor: pointer; 
     transition: background-color 0.3s; 
-    max-width: 500px; 
+    max-width: 600px; 
     color: white;
     font-family: Arial ;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-decoration: none;
     
 }
@@ -158,16 +164,7 @@ header h1 span {
     margin-left: 10px;
 }
 
-.profile-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-image: url('spotify-logo.png');
-    background-size: cover;
-    background-position: center;
-    display: inline-block;
-    margin-right: 10px;
-}
+
 section:hover {
     background-color:pink;
     transform: scale(1.1);
@@ -185,6 +182,65 @@ section h2 {
     color: white;
 }
 
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .img_logo,
+    .img_logo_am,
+    .img_logo_yt,
+    .img_logo_ig,
+    .img_logo_tt {
+        width: 40px; /* Reduce el tamaño de los íconos */
+        height: 40px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (smartphones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .img_logo,
+    .img_logo_am,
+    .img_logo_yt,
+    .img_logo_ig,
+    .img_logo_tt {
+        width: 30px; /* Reduce aún más el tamaño de los íconos */
+        height: 30px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+
 footer {
     background-color: pink;
     color: black;
@@ -200,6 +256,7 @@ footer p {
     margin: 0;
     font-size: 1rem;
 }
+
 
 
 /*                                         
